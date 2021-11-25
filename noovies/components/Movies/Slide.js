@@ -5,7 +5,7 @@ import { apiImage } from "../../api";
 import Poster from "../Poster";
 import { TouchableOpacity } from "react-native";
 
-
+//컨테이너 스타일 설정
 const Container = styled.View`
     height: 100%;
     width: 100%;
@@ -25,11 +25,13 @@ const Content = styled.View`
     justify-content: space-around;
 `;
 
+//데이터 크기 설정
 const Data = styled.View`
     width: 50%;
     align-items: flex-start;
 `;
 
+//타이틀 스타일 설정
 const Title = styled.Text`
     color: white;
     font-weight: bold;
@@ -61,10 +63,12 @@ const ButtonText = styled.Text`
     color: white;
 `;
 
+//슬라이드 설정
 const Slide = ( {id, title, backgroundImage, votes, overview, poster }) => (
     <Container>
         <BG source={{uri:apiImage(backgroundImage)}} />
         <Content>
+            //포스터 url 불러온 후 api로 이미지 가져오기.
             <Poster url={apiImage(poster)}/>
             <Data>
                 <Title>{title.length > 40 ? `${title.slice(0, 30)}...` : title }</Title>
@@ -72,7 +76,7 @@ const Slide = ( {id, title, backgroundImage, votes, overview, poster }) => (
                 <Overview>{overview.slice(0, 110)}...</Overview>
                 <TouchableOpacity>
                     <Button>
-                        <ButtonText>View details</ButtonText>
+                        <ButtonText>View details</ButtonText> //버튼 클릭시 영화 상세 페이지로 이동 
                     </Button>
                 </TouchableOpacity>
             </Data>
