@@ -28,8 +28,9 @@ export default ({ navigation, route }) => {
                     backgroundColor: "black",
                     borderTopColor: "black"
                 },
+        //탭바 아이콘 설정
                 tabBarIcon: ({focused}) => {
-                    let iconName = Platform.OS === "ios" ? "ios-" : "md-";
+                    let iconName = Platform.OS === "ios" ? "ios-" : "md-"; //ios와 안드로이드 둘 다 각자 아이콘에 맞게 설정
                     if(route.name === "Movies") {
                         iconName += "film"
                     } else if(route.name === "TV") {
@@ -49,6 +50,7 @@ export default ({ navigation, route }) => {
                 }
             })}
         >
+            //탭바 메뉴설정
             <Tabs.Screen options={{ headerShown: false }} name="Movies" component={Movies} />
             <Tabs.Screen options={{ headerShown: false }} name="TV" component={Tv} />
             <Tabs.Screen options={{ headerShown: false }} name="Search" component={Search} />
