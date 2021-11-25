@@ -19,7 +19,8 @@ export default () => {
             headerBackTitleVisible: false,
             gestureEnabled: true
         }}
-    >
+    >   
+        //상단의 스택 설정
         <Stack.Screen name="Tabs" component={Tabs} />
         <Stack.Screen name="Detail" component={Detail} />
     </Stack.Navigator>
