@@ -6,7 +6,7 @@ import AppLoading from 'expo-app-loading';
 import * as Font from 'expo-font';
 import { Asset } from 'expo-asset';
 import { Ionicons } from '@expo/vector-icons';
-import Stack from './navigation/Stack';
+import Stack from './navigation/Stack'; //네비게이션 스택을 import하여 불러옴
 
 const cacheImages = images => 
   images.map(image => {
