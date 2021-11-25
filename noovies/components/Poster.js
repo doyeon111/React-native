@@ -8,6 +8,7 @@ const Image = styled.Image`
     border-radius: 4px;
 `;
 
+//포스터 url을 불러옴
 const Poster = ({url}) => <Image source={{ uri: url }} />;
 
 Poster.PropTypes = {
